@@ -17,15 +17,9 @@ public class MemoryMappedFile {
     private File file;
 
     private MappedByteBuffer mappedByteBuffer;
-
-    /**
-     * 每次文件扩展大小
-     */
+    
     private long fileExtendSize;
 
-    /**
-     * 文件大小
-     */
     private long fileLength;
 
     private long filePosition = 0L;
