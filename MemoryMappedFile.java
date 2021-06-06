@@ -13,9 +13,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class MemoryMappedFile {
 
-    /**
-     * 文件
-     */
+  
     private File file;
 
     private MappedByteBuffer mappedByteBuffer;
@@ -69,7 +67,7 @@ public class MemoryMappedFile {
                 clean.setAccessible(true);
                 clean.invoke(cleaner.invoke(byteBuffer));
             } catch (NoSuchMethodException | ClassNotFoundException | IllegalAccessException | InvocationTargetException e) {
-                throw new RuntimeException("调用unmap 内存映射文件异常，请确认使用的是否为sun jdk", e);
+                throw new RuntimeException("get buffuer cleaner failed", e);
             }
         });
     }
